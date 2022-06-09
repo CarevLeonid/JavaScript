@@ -1,0 +1,108 @@
+<h3>1.С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+.</h3>
+				<script>
+				var start =2;
+				 var points = +prompt('Введите конечное значение числового ряда от 2 до 100 для вывода простых чисел');
+				 var primeArr = [];
+				 while (start <= points ){
+				 	 var i =1;
+				 	var result = 0;
+				 	 while (i <= start ) {
+				 		if (start  % i == 0 ){
+				 			result++;
+				 		}		
+				 			i++ ; 
+				 	}
+				 		if (result == 2) {
+    				primeArr.push(" " + start  );
+					
+				}
+				start ++;
+				}
+
+				 alert (primeArr); 
+				</script>
+
+
+                
+ 			<h3>2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.</h3>
+
+       <script>
+        let basket = [
+            {
+                product: "apple",
+                price: 100,
+                count: 10
+            },
+            {
+                product: "orange",
+                price: 150,
+                count: 50
+            },
+           
+            {
+           		product: "potate",
+                price: 100,
+                count: 30
+            },
+            {
+               	product: "tomato",
+                price: 80,
+                count: 30 
+                           }
+        		];
+        let basketSum = 0;
+        
+        for (let i of basket){
+            basketSum += (i.price * i.count);
+
+
+             }
+
+        alert('Стоимость корзины:'  + basketSum );
+
+    	</script>
+
+
+
+    	       <h3> 3. Товары в корзине хранятся в массиве. Задачи:
+         a) Организовать такой массив для хранения товаров в корзине;
+        b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+    </h3>
+       
+       <script>
+
+       	  let basket = [
+            {
+                product: "apple",
+                price: 100,
+                count: 10
+            },
+            {
+                product: "orange",
+                price: 150,
+                count: 50
+            },
+           
+            {
+           		product: "potate",
+                price: 100,
+                count: 30
+            },
+            {
+               	product: "tomato",
+                price: 80,
+                count: 30 
+                           }
+        		];
+
+        function countBasketPrice(basket) {
+            let funBasketPrice = 0;
+            for (let i of basket){
+                funBasketPrice += (i.price* i.count);
+            }
+            return funBasketPrice;
+        }
+
+        alert ('Стоимость корзины:' + countBasketPrice(basket) );
+    </script>
