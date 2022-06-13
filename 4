@@ -1,0 +1,78 @@
+    	       <h3> Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999,
+надо получить на выходе объект, в котором в соответствующих свойствах описаны единицы,
+десятки и сотни. Например, для числа 245 надо получить следующий объект: {‘единицы’: 5,
+‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее
+сообщение с помощью console.log и вернуть пустой объект.
+
+    </h3>
+       
+       <script>
+
+       			var number;
+       			var i;
+				function numberTranslation (number) {
+
+				number = prompt("Введите число от 0 до 999!");
+				if (number > 999) {
+				    i  ={};
+				    alert ("Число превышает 999");
+				} 
+				else {
+						i = number.split();
+						i.hundreds = number[0];
+						i.dozens = number[1];
+						i.units = number[2];
+
+						alert ("Объект" +  i + 'сотни: ' + i.hundreds + 
+'десятки: ' + i.dozens + ' единицы: ' + i.units );
+				      }
+				      
+				
+					}
+	 				numberTranslation(number);    	
+
+    </script>
+
+
+<h3>2. Продолжить работу с интернет-магазином:
+a. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими
+объектами можно заменить их элементы?
+b. Реализуйте такие объекты.
+c. Перенести функционал подсчета корзины на объектно-ориентированную базу.
+</h3>
+     <script>
+
+       	  let basket = [
+            {
+                product: "apple",
+                price: 100,
+                count: 10
+            },
+            {
+                product: "orange",
+                price: 150,
+                count: 50
+            },
+
+            {
+           		product: "potate",
+                price: 100,
+                count: 30
+            },
+            {
+               	product: "tomato",
+                price: 80,
+                count: 30 
+                           }
+        		];
+
+        function countBasketPrice(basket) {
+            let funBasketPrice = 0;
+            for (let i of basket){
+                funBasketPrice += (i.price* i.count);
+            }
+            return funBasketPrice;
+        }
+
+        alert ('Стоимость корзины:' + countBasketPrice(basket) );
+    </script> 
