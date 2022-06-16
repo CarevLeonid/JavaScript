@@ -1,0 +1,250 @@
+</script>
+
+    	       <h3>2. 
+
+    </h3>
+       
+
+       <div>
+       	
+       </div>
+       <script>
+
+		function chessDesk() {
+		 var table = document.createElement('table');
+    var flag = true;
+    
+    var trr = document.createElement('tr');
+    var arr = [' ','А','B','C','D','E','F','G','H'];
+    
+
+    for(var i = 0; i<8; i++){
+        var tr = document.createElement('tr');
+        
+       
+        var tdd = document.createElement('td');
+        tdd.style.width='50px';
+        tdd.style.height='50px';
+        tdd.innerHTML=8-i;
+        tr.appendChild(tdd);
+        
+        for(var j=0; j<8; j++){
+            
+            if(j==0)
+                flag=!flag;
+            
+            var td = document.createElement('td');
+            
+            td.style.width='100px';
+            td.style.height='100px';
+            if(flag){
+                td.style.background='black';    
+            }else
+                td.style.background='white';    
+                
+            tr.appendChild(td);
+            flag=!flag;
+        }
+        table.appendChild(tr);
+    }
+    
+  
+    for(var k = 0; k<9; k++){
+        
+        var td = document.createElement('td');
+        td.style.width='100px';
+        td.style.height='100px';
+        td.style.background='white';
+        td.innerHTML=arr[k];
+        
+        trr.appendChild(td);
+        
+    }
+    table.appendChild(trr);
+    
+    document.body.appendChild(table);
+}
+		chessDesk();
+	
+
+    </script>
+
+
+
+
+    /*2 */
+
+    
+			<script>
+	
+		var productID_0 = {productName:'0', price:52, pcs:1,sklad:4,bask: 0};
+		var productID_1 = {productName:'1', price:48, pcs:1,sklad:4,bask: 0};
+		var productID_2 = {productName:'2', price:49, pcs:1,sklad:4,bask: 0};
+		var productID_3 = {productName:'3', price:34, pcs:1,sklad:4,bask: 0};
+		var productID_4 = {productName:'4', price:57, pcs:1,sklad:4,bask: 0};
+		var productID_5 = {productName:'5', price:20, pcs:1,sklad:4,bask: 0};
+		var productID_6 = {productName:'6', price:33, pcs:1,sklad:4,bask: 0};
+		var productID_7 = {productName:'7', price:12, pcs:1,sklad:4,bask: 0};
+
+		
+
+	</script>
+			
+</head>
+<body>
+	
+	<div class="headline">
+		
+
+		<div class="headline-big-text">Корзина: <b id="basket"></b><a href="#" class="clear" onclick="clearBasket();">Очистить корзину</a> <i class="fas fa-times pink" title="очистить корзину" onclick="clearBasket();"></i></div>
+	</div>
+	<div class="futured_items">
+		<div class="container">
+			<div class="product container">
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">яблоки</p>
+						<div class="item-footer">
+							<p class="item-price pink">90.00</p>
+						</div>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_0);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">груши</p>
+						<p class="item-price pink">100.00</p>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_1);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">морковь</p>
+						<div class="item-footer">
+							<p class="item-price pink">40.00</p>
+						</div>
+					</div>
+					<div class="add_cart"><a href="#"  onclick="addToBasket(productID_2);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">лук</p>
+						<p class="item-price pink">30.00</p>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_3);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">ананас</p>
+						<p class="item-price pink">300.00</p>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_4);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">лимон</p>
+						<div class="item-footer">
+							<p class="item-price pink">20.00</p>
+						</div>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_5);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">помидор</p>
+						<p class="item-price pink">90.00</p>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_6);">добавить в корзину</a></div>
+				</div>
+				<div class="item">
+					
+					<div class="item-text-block">
+						<p class="item-name">огурец</p>
+						<p class="item-price pink">90.00</p>
+					</div>
+					<div class="add_cart"><a href="#" class="add" onclick="addToBasket(productID_7);">добавить в корзину</a></div>
+				</div>			
+			</div>
+		
+		</div>		
+	</div>
+	
+	<script>
+		
+		var arr = [];
+		
+		function addToBasket (product) {
+			
+			if (product.sklad >= 1) {		
+				alert('товар в корзине');
+				arr.push(product);	
+				countBasketPrice(arr);
+				product.bask = product.bask + 1;
+				product.sklad = product.sklad - 1;
+			} 
+			else {
+				alert('товар на складе закончился');
+			}
+			
+			console.log(product.sklad);
+			
+		}
+		
+		function clearBasket () {
+			arr = [];	
+			productID_0.sklad = productID_0.sklad  + productID_0.bask;
+			productID_0.bask = 0;
+			productID_1.sklad = productID_1.sklad  + productID_1.bask;
+			productID_1.bask = 0;
+			productID_2.sklad = productID_2.sklad  + productID_2.bask;
+			productID_2.bask = 0;
+			productID_3.sklad = productID_3.sklad  + productID_3.bask;
+			productID_3.bask = 0;
+			productID_4.sklad = productID_4.sklad  + productID_4.bask;
+			productID_4.bask = 0;
+			productID_5.sklad = productID_5.sklad  + productID_5.bask;
+			productID_5.bask = 0;
+			productID_6.sklad = productID_6.sklad  + productID_6.bask;
+			productID_6.bask = 0;
+			productID_7.sklad = productID_7.sklad  + productID_7.bask;
+			productID_7.bask = 0;
+			countBasketPrice(arr);
+			
+		}
+			
+		
+	
+		function countBasketPrice (arr) {
+			var basket = {
+				sum: 0,
+				pcs: 0,
+			};
+			var $div = document.getElementById('basket');
+			for(var i = 0; i < arr.length; i++) {
+				basket.sum += arr[i].price * arr[i].pcs;
+				basket.pcs += arr[i].pcs;
+			}
+			
+			console.log(basket);
+			console.log(arr);
+			
+			if (basket.sum == 0) { $div.textContent = 'товар не добавлен'; }
+			else {
+				
+				$div.textContent = basket.pcs+ ' ' + 'товар' + ' на сумму ' +basket.sum+ ' рублей';
+				
+			}
+			
+		}
+		
+		countBasketPrice(arr);
+		
+		
+	</script>
